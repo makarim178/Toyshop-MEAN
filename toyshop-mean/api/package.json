@@ -1,0 +1,23 @@
+{
+  "name": "mean_toy_shop",
+  "version": "1.0.0",
+  "description": "MEAN project: Online toy shop and admin panel",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcrypt": "*",
+    "body-parsec": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "uuid": "^8.3.0"
+  },
+  "author": "Mir Ashiful Karim",
+  "license": "ISC"
+}

@@ -1,0 +1,9 @@
+.menu-item{
+    color: darkblue;
+    text-decoration: none;
+}
+
+.menu-item:hover{
+    color: royalblue;
+    text-decoration: none;
+}

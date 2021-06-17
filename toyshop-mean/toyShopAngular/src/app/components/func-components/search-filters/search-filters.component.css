@@ -1,0 +1,25 @@
+.filterSubmitBtn{
+    width: 80%;
+}
+
+.btn-custom{
+    width: 89%;
+}
+.btnFilterDiv{
+    margin-left: 10%;
+}
+
+#dropdownBasic{
+    width: 80%;
+}
+
+.priceInput{
+    width:80%;
+}
+
+.ddlPos{
+    width: 73%;
+    margin-left:13.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

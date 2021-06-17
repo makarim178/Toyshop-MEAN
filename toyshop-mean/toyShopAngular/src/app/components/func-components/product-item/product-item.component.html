@@ -1,0 +1,26 @@
+
+  <div  class="card rounded">
+        <img class="card-img-top img-fluid" 
+            [src]="productItem.productImage"
+            alt="Product Card Image">
+      <div class="card-body">
+        <h5 class="card-title text-small">{{ productItem.productName}}</h5>
+        
+        <div class="clearfix">
+          <p class="card-text font-weight-bold float-left">Price: {{ productItem.productPrice | currency: 'CAD'}} </p>
+        <p class="card-text font-weight-bold float-right">
+          <button (click)="handleSendDataSingleItem()" [routerLink]="['/productdetails']" class="fas fa-eye text-primary border-0 rounded"></button>
+          &nbsp;
+          <button (click)="handleRemoveCartItem()" class="far fa-minus-square text-warning border-0 rounded"></button>
+          <!--<a href="#" class="far fa-minus-square text-warning"></a>-->
+          &nbsp;
+          <button (click)="handleAddToCart()" class="fas fa-cart-plus text-success border-0 rounded"></button>
+          <!--<a href=""  class="fas fa-cart-plus text-success"></a>-->
+        </p>
+      </div>
+      <div class="clearfix">
+          <p class="text-primary notifyTxt">Free Shipping when you spend $35 and more</p>
+      </div>
+      </div>
+    </div>
+

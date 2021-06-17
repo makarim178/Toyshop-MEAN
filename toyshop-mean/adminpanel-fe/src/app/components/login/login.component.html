@@ -1,0 +1,57 @@
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col col-md-12 text-center">
+            <h2 class="text-dark">User Login</h2>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col col-md-6 offset-md-3">
+            <form #loginForm="ngForm" (ngSubmit)="loginForm.valid && onLoginSubmit()">
+                <div class="form-group">
+                  <label for="username">User Name</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="username" 
+                    name="username"
+                    #username="ngModel"
+                    [ngClass]="{'is-invalid': username.touched && username.invalid}"
+                    [(ngModel)]="model.username"
+                    aria-describedby="usernameHelp" 
+                    placeholder="Enter User Name"
+                    required>
+                  <small id="usernameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  <span class="invalid-feedback">User Name field cannot be blank</span>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password" 
+                    name="password"
+                    #password="ngModel"
+                    [ngClass]="{'is-invalid': password.touched && password.invalid}"
+                    [(ngModel)]="model.password"
+                    placeholder="Password"
+                    required>
+                  <span class="invalid-feedback">Password field cannot be blank</span>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox"    
+                    class="form-check-input" 
+                    name="check"
+                    #check="ngModel"
+                    [(ngModel)]="model.check"
+                    id="check">
+                  <label class="form-check-label" for="check">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>

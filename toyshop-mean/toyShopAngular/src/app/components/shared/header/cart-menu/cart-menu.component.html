@@ -1,0 +1,22 @@
+
+<div class="btn-group float-right" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+    <button  class="btn btn-primary" ngbDropdownToggle>
+        <i class="fa fa-shopping-cart"></i>&nbsp; 
+        <span class="badge badge-light">{{ noOfCartItems }}</span>
+    <span class="sr-only">unread messages</span>
+    </button>
+    <div *ngIf="cartItems.length > 0"  class="dropdown-menu" ngbDropdownMenu>
+        
+        <button ngbDropdownItem  *ngFor="let i of cartItems">
+            <img class="cartImage border rounded" [src]="i.prodImage">
+            <span> {{ i.prodName }} X {{ i.qty }} = {{ i.price * i.qty | currency:'CAD' }}</span>
+        </button>
+
+        <button ngbDropdownItem class="btn btn-primary text-primary"><strong class="float-right">
+            Total: {{cartTotal | currency:'CAD'}}
+        </strong>
+    </button>
+        <!--<button ngbDropdownItem>Two</button>
+        <button ngbDropdownItem>Four!</button>--> 
+    </div>
+</div>
